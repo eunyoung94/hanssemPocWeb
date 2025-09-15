@@ -57,7 +57,7 @@
             box-sizing: border-box;
         }
         input[type="submit"] {
-            background-color: #d12a2a; /* 버튼 색상 */
+            background-color: #FF6B00;; /* 버튼 색상 */
             color: white;
             padding: 15px 30px;
             border: none;
@@ -90,31 +90,11 @@
     <div class="container">
         <div class="logo">
             </div>
-        <h1>🎁 한샘 55주년 특별 이벤트 🎁</h1>
-        <h2>인테리어 정보를 입력하고, 특별한 할인 쿠폰을 받아가세요!</h2>
+        <h1>✨ 한샘 2025년 가을맞이 특별 캠페인 ✨</h1>
+        <h2>전문가와 함께하는 인테리어 상담, 지금 바로 신청하세요!</h2>
 
         <form action="https://webto.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8" method="POST">
             <input type=hidden name="oid" value="[YOUR_ORG_ID]">
             <input type=hidden name="retURL" value="https://eunyoung94.github.io/hanssemPocWeb/success.html"> 
             
-            <div class="form-group">
-                <label for="first_name">이름</label>
-                <input id="first_name" maxlength="40" name="first_name" size="20" type="text" placeholder="이름을 입력해주세요" required />
-            </div>
-            
-            <div class="form-group">
-                <label for="email">이메일</label>
-                <input id="email" maxlength="80" name="email" size="20" type="email" placeholder="예: yourname@example.com" required />
-            </div>
-
-            <div class="form-group">
-                <label for="phone">휴대폰 번호</label>
-                <input id="phone" maxlength="40" name="phone" size="20" type="tel" placeholder="'-' 없이 숫자만 입력" />
-            </div>
-
-            <div class="form-group">
-                <label for="company">거주 지역 (시/도)</label>
-                <input id="company" maxlength="40" name="company" size="20" type="text" placeholder="예: 서울, 경기" />
-            </div>
-            
-            <input type="submit" name="submit" value="쿠폰받고 인테리어 상담 신청하기">
+            <a href="webToLead.html" class="button">인테리어 상담 신청하기</a>
