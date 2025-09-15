@@ -1,9 +1,118 @@
 <!DOCTYPE html>
-<html>
+<html lang="ko">
 <head>
-    <title>Test Page123</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>한샘 55주년 기념 이벤트 - 인테리어 상담 신청</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f4f7f6;
+            color: #333;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+        }
+        .container {
+            background-color: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            padding: 40px;
+            max-width: 600px;
+            width: 100%;
+            text-align: center;
+        }
+        h1 {
+            color: #d12a2a; /* 한샘 포인트 컬러 느낌 */
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+        h2 {
+            color: #555;
+            font-size: 1.2em;
+            margin-bottom: 30px;
+        }
+        .form-group {
+            margin-bottom: 20px;
+            text-align: left;
+        }
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+            color: #444;
+        }
+        input[type="text"],
+        input[type="email"],
+        input[type="tel"] {
+            width: calc(100% - 20px);
+            padding: 12px 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 1em;
+            box-sizing: border-box;
+        }
+        input[type="submit"] {
+            background-color: #d12a2a; /* 버튼 색상 */
+            color: white;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 5px;
+            font-size: 1.1em;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            width: 100%;
+            margin-top: 20px;
+        }
+        input[type="submit"]:hover {
+            background-color: #b01f1f;
+        }
+        .coupon-message {
+            margin-top: 25px;
+            font-size: 1.1em;
+            color: #d12a2a;
+            font-weight: bold;
+        }
+        .logo {
+            margin-bottom: 20px;
+        }
+        .logo img {
+            max-width: 150px;
+            height: auto;
+        }
+    </style>
 </head>
 <body>
-    <h1>test123</h1>
-</body>
-</html>
+    <div class="container">
+        <div class="logo">
+            </div>
+        <h1>🎁 한샘 55주년 특별 이벤트 🎁</h1>
+        <h2>인테리어 정보를 입력하고, 특별한 할인 쿠폰을 받아가세요!</h2>
+
+        <form action="https://webto.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8" method="POST">
+            <input type=hidden name="oid" value="[YOUR_ORG_ID]">
+            <input type=hidden name="retURL" value="https://eunyoung94.github.io/hanssemPocWeb/success.html"> 
+            
+            <div class="form-group">
+                <label for="first_name">이름</label>
+                <input id="first_name" maxlength="40" name="first_name" size="20" type="text" placeholder="이름을 입력해주세요" required />
+            </div>
+            
+            <div class="form-group">
+                <label for="email">이메일</label>
+                <input id="email" maxlength="80" name="email" size="20" type="email" placeholder="예: yourname@example.com" required />
+            </div>
+
+            <div class="form-group">
+                <label for="phone">휴대폰 번호</label>
+                <input id="phone" maxlength="40" name="phone" size="20" type="tel" placeholder="'-' 없이 숫자만 입력" />
+            </div>
+
+            <div class="form-group">
+                <label for="company">거주 지역 (시/도)</label>
+                <input id="company" maxlength="40" name="company" size="20" type="text" placeholder="예: 서울, 경기" />
+            </div>
