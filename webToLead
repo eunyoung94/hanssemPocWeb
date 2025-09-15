@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>한샘 인테리어 상담 신청</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f4f7f6;
+            color: #333;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+        }
+        .container {
+            background-color: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            padding: 40px;
+            max-width: 600px;
+            width: 100%;
+            text-align: center;
+        }
+        h1 {
+            color: #FF6B00;
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+        h2 {
+            color: #555;
+            font-size: 1.2em;
+            margin-bottom: 30px;
+        }
+        .form-group {
+            margin-bottom: 20px;
+            text-align: left;
+        }
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+            color: #444;
+        }
+        input[type="text"],
+        input[type="email"],
+        input[type="tel"],
+        select {
+            width: 100%;
+            padding: 12px 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 1em;
+            box-sizing: border-box;
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            appearance: none;
+        }
+        input[type="submit"] {
+            background-color: #FF6B00;
+            color: white;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 5px;
+            font-size: 1.1em;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            width: 100%;
+            margin-top: 20px;
+        }
+        input[type="submit"]:hover {
+            background-color: #E65A00;
+        }
+        .required {
+            color: #FF6B00;
+        }
+        .logo {
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>인테리어 상담 정보 입력</h1>
+        <h2>전문가와 1:1 맞춤 상담을 위해 아래 정보를 정확히 입력해주세요.</h2>
+
+        <form action="https://test.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8&orgId=00DJP000001UwfZ"
+              method="POST">
+
+            <input type="hidden" name="oid" value="00DJP000001UwfZ">
+            <input type="hidden" name="retURL" value="https://eunyoung94.github.io/hanssemPocWeb/success.html">
+
+            <div class="form-group">
+                <label for="last_name"><span class="required">*</span> 이름</label>
+                <input id="last_name" name="last_name" type="text" placeholder="이름을 입력해주세요" required />
+            </div>
+
+            <div class="form-group">
+                <label for="mobile"><span class="required">*</span> 휴대폰</label>
+                <input id="mobile" name="mobile" type="tel" placeholder="'-' 없이 숫자만 입력" required />
+            </div>
+
+            <div class="form-group">
+                <label for="00NdJ000000psmL"><span class="required">*</span> 시작 희망 시점</label>
+                <select id="00NdJ000000psmL" name="00NdJ000000psmL" required>
+                    <option value="Within1Month">1개월 이내</option>
+                    <option value="Within3Months">3개월 이내</option>
+                    <option value="Within6Months">6개월 이내</option>
+                    <option value="After6Months">6개월 이후</option>
+                </select>
+            </div>
+            
+            <div class="form-group">
+                <label for="00NdJ000000pscf"><span class="required">*</span> 인테리어 공간 유형</label>
+                <select id="00NdJ000000pscf" name="00NdJ000000pscf" required>
+                    <option value="Apartment">아파트</option>
+                    <option value="Villa">빌라</option>
+                    <option value="DetachedHouse">단독주택</option>
+                    <option value="Officetel">오피스텔</option>
+                    <option value="Other">기타</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="00NdJ000000pseH">인테리어 평수</label>
+                <select id="00NdJ000000pseH" name="00NdJ000000pseH" title="인테리어 평수">
+                    <option value="Under10">10평 이하</option>
+                    <option value="From11To20">11~20평</option>
+                    <option value="From21To30">21~30평</option>
+                    <option value="From31To40">31~40평</option>
+                    <option value="From41To50">41~50평</option>
+                    <option value="Over51">51평이상</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="00NdJ000000psft">집 상태</label>
+                <select id="00NdJ000000psft" name="00NdJ000000psft" title="집 상태">
+                    <option value="NewConstruction">신축</option>
+                    <option value="Within5Years">준공 5년이내</option>
+                    <option value="Within10Years">준공 10년이내</option>
+                    <option value="OldNeedsRemodeling">노후(리모델링필요)</option>
+                    <option value="PartialRepairNeeded">부분 보수 필요</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="00NdJ000000ptdZ">인테리어 사유</label>
+                <select id="00NdJ000000ptdZ" name="00NdJ000000ptdZ" title="인테리어 사유">
+                    <option value="AfterPurchaseRemodeling">집을 구매한 후 리모델링 계획중</option>
+                    <option value="UpdateCurrentHome">사는 집을 새롭게 변경</option>
+                    <option value="ForSaleOrRentRemodeling">매매나 임대를 위한 리모델링</option>
+                    <option value="Other">기타</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="00NdJ000000pskj">예상 예산</label>
+                <select id="00NdJ000000pskj" name="00NdJ000000pskj" title="예상 예산">
+                    <option value="Under5Million">500만원 이하</option>
+                    <option value="From5To10Million">500~1,000 만원</option>
+                    <option value="From10To20Million">1,000~2,000 만원</option>
+                    <option value="Over20Million">2,000 만원 이상</option>
+                </select>
+            </div>
+            
+            <div class="form-group" style="text-align: center;">
+                <label>
+                    <input id="00NdJ000000psb3" name="00NdJ000000psb3" type="checkbox" value="1" required/>
+                    <span class="required">*</span> 개인정보 수집 동의
+                </label>
+            </div>
+
+            <input type="submit" value="상담 신청하기">
+        </form>
+    </div>
+</body>
+</html>
